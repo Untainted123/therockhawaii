@@ -188,17 +188,24 @@ hr.small {
 }
 
 /* Callout */
-
 .callout {
     display: table;
     width: 100%;
     height: 400px;
     color: #fff;
-    background: url(../images/kailua_beach.png) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background: url(../images/kailua_beach.png) no-repeat center center scroll;
+}
+
+.callout h1 {
+  color: #000;
+}
+
+.callout h4 {
+  color: rgb(216,232,237);
 }
 
 /* Portfolio */
