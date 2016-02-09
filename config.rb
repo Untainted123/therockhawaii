@@ -36,6 +36,8 @@ configure :build do
 
   # Minify Javascript on build
   activate :minify_javascript
+
+  #activate :gzip
 end
 
 activate :deploy do |deploy|
@@ -45,3 +47,6 @@ activate :deploy do |deploy|
 end
 
 activate :directory_indexes
+page "/404.html", directory_index: false
+set :partials_dir, "partials"
+set :debug_assets, true
