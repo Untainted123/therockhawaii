@@ -1,20 +1,31 @@
-<!doctype html>
-<html>
-  <head>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Rock Kailua" %></title>
+<head>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <%= partial "head-contents" %>
+  
+</head>
 
-    <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
-  </head>
+<body>
 
-  <body class="<%= page_classes %>">
-    <%= yield %>
-  </body>
+  <%= partial "navigation" %>
+  <%= partial "header" %>
+
+
+<%= yield %>
+
+<%= partial "footer" %>
+
+<!-- jQuery -->
+<script src="javascripts/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="javascripts/bootstrap.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<%= partial "scripts" %>
+
+</body>
+
 </html>
